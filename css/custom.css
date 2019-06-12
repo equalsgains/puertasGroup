@@ -144,3 +144,18 @@
 .parallax-video {
   display: block !important;
 }
+.v-testimonials--body{
+  cursor: pointer !important;
+}
+.pointer {
+  cursor: pointer !important;
+}
+.bottomContact {
+  color: #777;
+  border: inherit;
+  border-color: rgb(68, 68, 68) !important;
+
+}
+.bottomContact:hover {
+  color: #377dff;
+}
