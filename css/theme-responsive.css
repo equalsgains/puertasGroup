@@ -1,12 +1,12 @@
 @media (max-width: 991px) {
- 
+
     /* Responsive Button Nav */
     button.btn-responsive-nav { background: #2D343E; top: 10px; display: block; position: absolute; right: 20px; color: #FFF; border-bottom-color: #2D343E; }
 
     button.btn-responsive-nav:hover,
     button.btn-responsive-nav:active,
     button.btn-responsive-nav:focus { color: #CCC; }
- 
+
 
     .v-process-steps ul li { width: 50% !important; margin-bottom: 25px !important; }
     .v-process-steps ul:before { display: none !important; }
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 767px) {
- 
+
 
     .main .has-right-sidebar .col-sm-8,
     .main .has-right-sidebar .col-sm-9 { width: 100% !important; border-right: solid 0px #EBEBEB; margin-right: 0px; padding-right: 15px !important; padding-left: 15px !important; }
@@ -88,7 +88,7 @@
 
 
 @media (max-width: 479px) {
- 
+
 
     ul.v-portfolio-items.column-3 .v-portfolio-item { width: 99.8%; }
 
@@ -161,10 +161,10 @@
     .carousel-wrap a.next,
     .flex-direction-nav { opacity: 1; -moz-opacity: 1; filter: alpha(opacity=1); display: none !important; }
 
-    .v-parallax-video video { top: 0 !important; }
-    .v-parallax { background-attachment: scroll; }
+
     .team-member figcaption span { display: none; }
 }
+
 
 @media only screen and (max-width: 991px) {
 
@@ -242,10 +242,10 @@
     h4.v-center-heading { max-width: 60%; }
     .v-icon.v-icon-large { line-height: 84px; }
 
-    /*.v-parallax-video.v-bg-stylish {
+    .v-parallax-video.v-bg-stylish {
         margin-left:-15px;
         margin-right:-15px;
-    }*/
+    }
 
     /* FOOTER */
     footer { padding-bottom: 10px; padding-top: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
@@ -290,7 +290,6 @@
 
     .v-clients-widget-v2 [class*="col-sm"] { margin-bottom: 0px; }
     .v-tweets-slide-widget .text-large .tweet-text { font-size: 16px; line-height: 28px; }
-    .v-parallax { background-attachment: scroll; }
     .v-control-left .v-call-text,
     .v-control-right .v-call-text { float: none; width: 100%; }
     .v-control-right .btn.v-btn,

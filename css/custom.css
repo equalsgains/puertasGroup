@@ -138,3 +138,9 @@
 .messageLabel {
   vertical-align: top;
 }
+.v-parallax-video video { top: 0 !important; }
+.v-parallax { background-attachment: scroll; }
+.v-parallax { width: auto; }
+.parallax-video {
+  display: block !important;
+}
