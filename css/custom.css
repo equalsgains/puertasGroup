@@ -122,11 +122,14 @@
 }
 .formContainer {
   text-align: right;
+  max-width: 100%;
+
 }
 .mc-field-group {
   font-size: 1.5em;
   padding: .2em;
   width: 100%;
+  max-width: 100%;
 }
 .mc-field-group label {
   font-size: .7em;
@@ -134,6 +137,8 @@
 .formTitle {
   text-align: center;
   font-size: 2em;
+  max-width: 100%;
+
 }
 .messageLabel {
   vertical-align: top;
@@ -158,4 +163,15 @@
 }
 .bottomContact:hover {
   color: #377dff;
+}
+.container_form {
+  max-width: 100% !important;
+  margin: auto;
+}
+.mc_embed_signup {
+  max-width: 100% !important;
+  text-align: center;
+}
+input#mce-EMAIL, input#mce-FNAME, input#mce-LNAME, input#mce-PHONE,   {
+  max-width: 98%;
 }

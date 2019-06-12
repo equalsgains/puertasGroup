@@ -320,7 +320,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 				$el.on('change.owl.carousel', function(event) {
 				  	$el.find('.owl-item').removeClass('current');
-					
+
 					setTimeout(function(){
 					  	var itemsActive    = $el.find('.owl-item.active'),
 					  		itemCenter     = itemsActive.eq(indexCenter);
@@ -377,7 +377,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 						$el.find('.owl-item.cloned div:not(.prev)').css('opacity', 0);
 						$el.find('.owl-item.active div:not(.prev)').css('opacity', 1);
 					});
-						
+
 				});
 
 				$el.on('drag.owl.carousel', function(){
@@ -765,13 +765,13 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			}
 
 			// Initialize Mirror Carousel
-			self.$mirrorCarousel.owlCarousel(this.options).addClass('owl-carousel-init mirrored');			
+			self.$mirrorCarousel.owlCarousel(this.options).addClass('owl-carousel-init mirrored');
 
 			// Set the first item position of Mirror Carousel
 			for( var i=1; i <= self.$mirrorCarousel.find('.owl-item.active').length - 1; i++ ) {
 				self.$mirrorCarousel.trigger('prev.owl.carousel');
 			}
-			
+
 			self.events();
 			self.recalcCarouselsWidth();
 
@@ -806,7 +806,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				    self.$mirrorCarousel.owlCarousel('to', target - (self.$mirrorCarousel.find('.owl-item.active').length - 1), 300, true);
 				    self.$mirrorCarousel.find('.owl-item').removeClass('current');
 			        self.$mainCarousel.find('.owl-item').removeClass('current');
-			        
+
 			        setTimeout(function(){
 			        	self.$mirrorCarousel.find('.owl-item.active').eq( self.$mirrorCarousel.find('.owl-item.active').length - 1 ).addClass('current');
 			        	self.$mainCarousel.find('.owl-item.active').eq(0).addClass('current');
@@ -825,7 +825,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 					    self.$mainCarousel.owlCarousel('to', target - (self.$mainCarousel.find('.owl-item.active').length - 1), 300, true);
 					    self.$mainCarousel.find('.owl-item').removeClass('current');
 				        self.$mirrorCarousel.find('.owl-item').removeClass('current');
-				        
+
 				        setTimeout(function(){
 				        	self.$mainCarousel.find('.owl-item.active').eq( self.$mainCarousel.find('.owl-item.active').length - 1 ).addClass('current');
 				        	self.$mirrorCarousel.find('.owl-item.active').eq(0).addClass('current');
@@ -836,7 +836,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				});
 			}
 		},
-		
+
 		recalcCarouselsWidth: function() {
 			var self 		     = this,
 				$el 		     = this.options.wrapper,
@@ -845,25 +845,25 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				totalActiveItems = self.$mirrorCarousel.find('.owl-item.active').length;
 
 			if( totalActiveItems > 1 ) {
-				
+
 				self.$mirrorCarousel.width( $el.find('.wrapper-left').width() + dividedItemSize );
 				setTimeout(function(){
 					self.$mirrorCarousel.css({
 						right: dividedItemSize
 					});
 				}, 500);
-				
+
 				self.$mainCarousel.width( $el.find('.wrapper-right').width() + dividedItemSize );
 
 			} else {
-				
+
 				self.$mirrorCarousel.width( $el.find('.wrapper-left').width() );
 				setTimeout(function(){
 					self.$mirrorCarousel.css({
 						right: 0
 					});
 				}, 500);
-				
+
 				self.$mainCarousel.width( $el.find('.wrapper-right').width() );
 
 			}
@@ -876,7 +876,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 			$(document).ready(function(){
 				$(window).afterResize(function(){
-					
+
 					// First - Refresh both carousels to set new sizes
 					self.$mirrorCarousel.trigger('refresh.owl.carousel');
 					self.$mainCarousel.trigger('refresh.owl.carousel');
@@ -909,18 +909,18 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			var self = this;
 
 			$(window).on('double.carousel.recalc.width', function(e){
-					
+
 				// Refresh carousels to set new sizes
 				self.$mirrorCarousel.trigger('refresh.owl.carousel');
 				self.$mainCarousel.trigger('refresh.owl.carousel');
-				
+
 				// Set current item
 				self.$mirrorCarousel.find('.owl-item.active').eq( self.$mirrorCarousel.find('.owl-item.active').length - 1 ).addClass('current');
 	        	self.$mainCarousel.find('.owl-item.active').eq(0).addClass('current');
 
 				// Position the first item
 				self.$mainCarousel.trigger('prev.owl.carousel').trigger('next.owl.carousel');
-        		
+
 			});
 		}
 	};
@@ -1032,11 +1032,11 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				}
 
 				// First Load
-				self.movement(minus);	
+				self.movement(minus);
 
 				// Scroll
 				$window.on('scroll', function(){
-					self.movement(minus);				   
+					self.movement(minus);
 				});
 
 			}
@@ -1069,7 +1069,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			   		});
 
 		   		}
-		   		
+
 		   	}
 		}
 	};
@@ -1187,7 +1187,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				// SVG Fill Based
 				if( self.options.animated && !self.options.strokeBased || !self.options.animated && color && !self.options.strokeBased ) {
 					animateStyle = 'stroke-width: 0.1px; fill-opacity: 0; transition: ease fill-opacity 300ms;';
-					
+
 					// Set Style on SVG inside object
 					styleElement.textContent = 'path, line, rect, circle, line, polyline { fill: '+ color +'; stroke: '+ color +'; '+ animateStyle + (self.options.svgStyle ? self.options.svgStyle : "") + ' } .finished path { fill-opacity: 1; }';
 					obj.el.appendChild(styleElement);
@@ -1205,7 +1205,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				$(window).on('styleSwitcher.modifyVars', function(e){
 					if( self.options.color.toUpperCase() != '#FFF' ) {
 						if( e.options.colorPrimary.toUpperCase() != self.options.color.toUpperCase() ) {
-							
+
 							var	styleElement = document.createElementNS("http://www.w3.org/2000/svg", "style"),
 								svg          = obj.el;
 
@@ -1215,7 +1215,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 								styleElement.textContent = 'path, line, rect, circle, line, polyline { fill: '+ e.options.colorPrimary +'; stroke: '+ e.options.colorPrimary +'; }';
 							}
 							svg.appendChild(styleElement);
-						
+
 						}
 					}
 				});
@@ -1234,7 +1234,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 			// Animated
 			if( self.options.animated && $(window).width() > 767 ) {
-				
+
 				// First Load
 				if( $el.visible( true ) ) {
 					self.startIconAnimation( icon, $el );
@@ -1250,7 +1250,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				});
 
 			} else {
-				
+
 				$el.css({ opacity: 1 });
 
 				$(window).on('theme.plugin.icon.svg.ready', function(){
@@ -1258,7 +1258,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 						icon.el.setAttribute('class', 'finished');
 					}, 300);
 				});
-				
+
 			}
 
 			return this;
@@ -1408,7 +1408,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 		effect: 'show',
 		appearEffect: '',
 		appear: function(elements_left, settings) {
-			
+
 		},
 		load: function(elements_left, settings) {
 			$(this).addClass($.trim('lazy-load-loaded ' + settings.appearEffect));
@@ -2100,7 +2100,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				'top' : 0,
 				'left' : 0,
 				'width' : '100%',
-				'height' : (!$.browser.mobile) ? self.options.parallaxHeight : '100%'
+				'height' : ($.browser.mobile) ? self.options.parallaxHeight : '100%'
 			});
 
 			// Add Parallax Element on DOM
@@ -2119,7 +2119,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				optOffset = self.options.offset;
 
 				$window.on('scroll resize', function() {
-					
+
 					// Responsive Offset
 					if( self.options.responsiveOffset ) {
 						var window_w = $window.width(),
@@ -2143,7 +2143,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 						'transform' : 'translate3d(0, '+ ( (plxPos - 50) + (optOffset) ) +'px, 0)',
 						'background-position-x' : self.options.horizontalPosition
 					});
-					
+
 				});
 
 				$window.trigger('scroll');
@@ -2155,7 +2155,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				if( self.options.enableOnMobile == true ) {
 					parallaxEffectOnScrolResize();
 				} else {
-					self.options.wrapper.addClass('parallax-disabled');
+					self.options.wrapper.addClass('nothing');
 				}
 			}
 
@@ -2880,13 +2880,13 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			self.$destination.attr('data-filter', filter).isotope({
 				filter: currentFilter
 			}).one('arrangeComplete', function( event, filteredItems ) {
-				
+
 				if (self.options.useHash) {
 					if (window.location.hash != '' || self.options.filter.replace('.', '') != '*') {
 						window.location.hash = self.options.filter.replace('.', '');
 					}
 				}
-				
+
 				$(window).trigger('scroll');
 
 			}).trigger('filtered');
@@ -2989,11 +2989,11 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 // Steps
 (function(theme, $) {
-	
+
 	'use strict';
-	
+
 	theme = theme || {};
-	
+
 	var instanceName = '__steps';
 
 	var PluginSteps = function($el, opts) {
@@ -3047,7 +3047,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				$el.find('.item').eq(0).addClass('active');
 			}
 
-			var start = function(firstTime) {				
+			var start = function(firstTime) {
 				var activeItem = $el.find('.item.active'),
 					firstItem  = $el.find('.item').eq(0),
 					nextItem   = ( activeItem.next().length == 0 ) ? firstItem : activeItem.next(),
@@ -3106,7 +3106,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 				// Check if is first time
 				if( !firstTime ) {
-					
+
 					// Set active border color for next item
 					setTimeout(function(){
 						nextItem2.css({
@@ -3123,7 +3123,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 					}
 
 				} else {
-					
+
 					// Remove active border color from first item
 					setTimeout(function(){
 						firstItem.css({
@@ -3145,10 +3145,10 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 						$('[data-link-id]').addClass('steps-shadow active');
 						$('[data-link-id="'+ link_to +'"]').removeClass('active');
 					}
-				
+
 				}
 
-							
+
 			}
 
 			var initialized = false;
@@ -3166,7 +3166,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 					}, self.options.delay);
 				}
 			});
-			
+
 			return this;
 		}
 	};
@@ -3186,7 +3186,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			} else {
 				return new PluginSteps($this, opts);
 			}
-			
+
 		});
 	}
 
@@ -3194,11 +3194,11 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 // Sticky
 (function(theme, $) {
-	
+
 	'use strict';
-	
+
 	theme = theme || {};
-	
+
 	var instanceName = '__sticky';
 
 	var PluginSticky = function($el, opts) {
@@ -3206,7 +3206,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 	};
 
 	PluginSticky.defaults = {
-		
+
 	};
 
 	PluginSticky.prototype = {
@@ -3244,7 +3244,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			var self = this,
 				$window = $(window),
 				$html = $('html');
-			
+
 			if( !$.browser.mobile && !self.options.stickyStartAt ) {
 				self.options.wrapper.stick_in_parent(self.options);
 			}
@@ -3273,7 +3273,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 					}
 				}
 			}
-			
+
 			return this;
 		},
 		events: function() {
@@ -3286,13 +3286,13 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 				if( self.options.stickyStartAt < $window.scrollTop() ) {
 					$html.addClass('sticky-wrapper-active');
-					
+
 					if( $logo.attr('data-change-src') ) {
 						self.changeLogoSrc(true);
 					}
 				} else {
 					$html.removeClass('sticky-wrapper-active');
-					
+
 					if( $logo.attr('data-change-src') ) {
 						self.changeLogoSrc(false);
 					}
@@ -3317,7 +3317,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 			} else {
 				return new PluginSticky($this, opts);
 			}
-			
+
 		});
 	}
 
@@ -3681,7 +3681,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 					e.preventDefault();
 					$.get(self.options.refreshCaptchaURL, function(url) {
 						$('#captcha-image').attr('src', url);
-					});					
+					});
 				});
 
 			},
@@ -3922,7 +3922,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 				// Side Header
 				if( $html.hasClass('side-header') || $html.hasClass('side-header-overlay-full-screen') ) {
-					
+
 					// Nano Scroll
 					$('.nano').nanoScroller({
 						alwaysVisible: true
@@ -3975,17 +3975,17 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 								if( $html.hasClass('side-header') || $html.hasClass('side-header-overlay-full-screen') ) {
 									$('.nano').nanoScroller();
 								}
-								
+
 							});
 						} else {
 							$(this).closest('li').addClass('opened');
 							$(this).closest('li').find('> .dropdown-menu').slideDown(600, function(){
-								
+
 								// Refresh Nano Scroll
 								if( $html.hasClass('side-header') || $html.hasClass('side-header-overlay-full-screen') ) {
 									$('.nano').nanoScroller();
 								}
-								
+
 							});
 						}
 					}
@@ -4033,7 +4033,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				// Mobile Menu Button
 				var mobileMenuBtn = $('.header-btn-collapse-nav'),
 					flagMenu = true;
-				
+
 				mobileMenuBtn.on('click', function(){
 					if( flagMenu ) {
 						$(this).toggleClass('active');
@@ -4075,7 +4075,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 									// Scroll to target
 									self.scrollToTarget(target, offset, highlight);
-									
+
 								}
 							} else {
 								// Scroll to target
@@ -4105,7 +4105,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				if( $html.hasClass('side-header-from-out') || $html.hasClass('side-header-overlay-full-screen') ) {
 					$('.side-header-btn-toggle').on('click', function(){
 						$header.toggleClass('side-header-show');
-						
+
 						if( $html.hasClass('side-header-overlay-full-screen') ) {
 							$html.find('body').addClass('no-vertical-scroll');
 						}
@@ -4114,7 +4114,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 					$('.side-header-btn-close').on('click', function(){
 						$header.removeClass('side-header-show');
-						
+
 						if( $html.hasClass('side-header-overlay-full-screen') ) {
 							$html.find('body').removeClass('no-vertical-scroll');
 						}
@@ -4125,12 +4125,12 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				// Header Search Expanded
 				var searchBtn  = $header.find('.header-search-button'),
 					searchExpanded = $header.find('.header-search-expanded');
-				
+
 				if( searchExpanded ) {
 					searchBtn.on('click', function(){
 						$html.toggleClass('header-search-expanded-active');
 					});
-					
+
 					$(document).mouseup(function(e) {
 						if (!searchExpanded.is(e.target) && searchExpanded.has(e.target).length === 0) {
 							$html.removeClass('header-search-expanded-active');
@@ -4149,7 +4149,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 				$('html, body').animate({
 					scrollTop: $(target).offset().top - offset
 				}, self.options.scrollDelay, self.options.scrollAnimation, function() {
-					
+
 					if( highlight ) {
 						$(target).addClass('highlight-anim');
 
@@ -4269,7 +4269,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 								$wrapper.find('.has-success')
 									.removeClass('has-success');
-									
+
 							});
 
 						},
@@ -4471,7 +4471,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 						self.deactivateStickyHeader();
 					}
 				};
-				
+
 				// Activate Sticky Header
 				self.activateStickyHeader = function() {
 
@@ -4492,7 +4492,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 					// Set Header Body Position Fixed and top value
 					if( self.options.stickyStartAt ) {
 						self.options.headerBody.css('position','fixed');
-						self.options.headerBody.css('top', self.options.stickySetTop);	
+						self.options.headerBody.css('top', self.options.stickySetTop);
 					}
 
 					// Sticky Effect - Shrink
@@ -4582,7 +4582,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 							if( $window.scrollTop() > $('.body').offset().top ) {
 								// Set Header Body Position Fixed
-								self.options.headerBody.css('position','fixed');								
+								self.options.headerBody.css('position','fixed');
 							}
 
 						} else {
@@ -4642,7 +4642,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 
 					self.changeLogo = function(activate) {
 						if(activate) {
-							
+
 							$logo.css({
 								'top': logoSmallTop,
 								'width': logoSmallWidth,
@@ -4650,7 +4650,7 @@ Description: 	This is a jQuery plugin which allows us to quickly check if an ele
 							});
 
 						} else {
-							
+
 							$logo.css({
 								'top': 0,
 								'width': logoWidth,
