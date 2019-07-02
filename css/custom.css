@@ -175,3 +175,9 @@
 input#mce-EMAIL, input#mce-FNAME, input#mce-LNAME, input#mce-PHONE,   {
   max-width: 98%;
 }
+#cta {
+  text-align: center;
+}
+.v-bg-stylish {
+  padding-bottom: 0;
+}
